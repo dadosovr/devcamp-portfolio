@@ -71,4 +71,6 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:titolo, :corpo)
     end
+
+    validates_presence_of :titolo, :corpo
 end
